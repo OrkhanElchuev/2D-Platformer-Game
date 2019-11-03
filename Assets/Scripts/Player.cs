@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     Rigidbody2D playerRigidBody;
     Animator playerAnimator;
     Collider2D playerCollider2D;
+    private float gravityAtStart;
 
     // States
     private bool isAlive = true;
@@ -40,6 +41,7 @@ public class Player : MonoBehaviour
         playerRigidBody = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
         playerCollider2D = GetComponent<Collider2D>();
+        gravityAtStart = playerRigidBody.gravityScale;
     }
 
     // Jump the player
@@ -60,11 +62,16 @@ public class Player : MonoBehaviour
         }
     }
 
+    // Climbing ladder
     private void ClimbLadder()
     {
         // If player is not colliding with ladder then return 
         if (!playerCollider2D.IsTouchingLayers(LayerMask.GetMask("Climbing")))
         {
+            // Stop climbing animation after exiting ladder
+            playerAnimator.SetBool("Climbing", false);
+            // Set gravity of player to initial value
+            playerRigidBody.gravityScale = gravityAtStart;
             return;
         }
         // Value in a range -1 to 1 in Game Configuration file
@@ -72,6 +79,8 @@ public class Player : MonoBehaviour
         // Define player climbing velocity
         Vector2 climbingVelocity = new Vector2(playerRigidBody.velocity.x, controlThrow * climbingSpeed);
         playerRigidBody.velocity = climbingVelocity;
+        // Avoid falling down from ladder 
+        playerRigidBody.gravityScale = 0f;
         // Check if player is moving vertically
         bool playerIsMovingVer = Mathf.Abs(playerRigidBody.velocity.y) > Mathf.Epsilon;
         // Execute climbing animation 
