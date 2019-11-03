@@ -14,7 +14,8 @@ public class Player : MonoBehaviour
     // Cached components
     Rigidbody2D playerRigidBody;
     Animator playerAnimator;
-    Collider2D playerCollider2D;
+    CapsuleCollider2D playerBodyCollider2D;
+    BoxCollider2D playerFootCollider2D;
     private float gravityAtStart;
 
     // States
@@ -40,7 +41,8 @@ public class Player : MonoBehaviour
     {
         playerRigidBody = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
-        playerCollider2D = GetComponent<Collider2D>();
+        playerBodyCollider2D = GetComponent<CapsuleCollider2D>();
+        playerFootCollider2D = GetComponent<BoxCollider2D>();
         gravityAtStart = playerRigidBody.gravityScale;
     }
 
@@ -49,7 +51,7 @@ public class Player : MonoBehaviour
     {
         // If player is not colliding with ground then return
         // Created to avoid multiple jumps at once
-        if (!playerCollider2D.IsTouchingLayers(LayerMask.GetMask("Ground")))
+        if (!playerFootCollider2D.IsTouchingLayers(LayerMask.GetMask("Ground")))
         {
             return;
         }
@@ -66,7 +68,7 @@ public class Player : MonoBehaviour
     private void ClimbLadder()
     {
         // If player is not colliding with ladder then return 
-        if (!playerCollider2D.IsTouchingLayers(LayerMask.GetMask("Climbing")))
+        if (!playerFootCollider2D.IsTouchingLayers(LayerMask.GetMask("Climbing")))
         {
             // Stop climbing animation after exiting ladder
             playerAnimator.SetBool("Climbing", false);
