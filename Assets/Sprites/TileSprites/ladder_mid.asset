@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ladder_mid
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 21300000, guid: 357cf7e979142114da4ae7f3611c03cb, type: 3}
-  m_Color: {r: 0.3207547, g: 0.31621572, b: 0.31621572, a: 1}
+  m_Color: {r: 0.14150941, g: 0.14150941, b: 0.14150941, a: 1}
   m_Transform:
     e00: 1
     e01: 0
