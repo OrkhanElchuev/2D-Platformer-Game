@@ -54,8 +54,8 @@ public class Player : MonoBehaviour
     // Kill the player
     private void Die()
     {
-        // In case of collision with enemy
-        if (playerRigidBody.IsTouchingLayers(LayerMask.GetMask("Enemy")))
+        // In case of collision with enemy or hazards
+        if (playerRigidBody.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazards")))
         {
             isAlive = false;
             // Execute dying animation
