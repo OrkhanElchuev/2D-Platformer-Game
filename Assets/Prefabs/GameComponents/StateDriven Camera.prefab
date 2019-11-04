@@ -100,6 +100,8 @@ MonoBehaviour:
     m_ParentHash: 756556552
   - m_Hash: 870981892
     m_ParentHash: 756556552
+  - m_Hash: -1752896643
+    m_ParentHash: 756556552
 --- !u!1001 &8761255947284368010
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -120,12 +122,12 @@ PrefabInstance:
     - target: {fileID: 6723440616749141513, guid: a7817007e2df2444eab23c92b709d132,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.92
+      value: -7.94
       objectReference: {fileID: 0}
     - target: {fileID: 6723440616749141513, guid: a7817007e2df2444eab23c92b709d132,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.47
+      value: -3.465
       objectReference: {fileID: 0}
     - target: {fileID: 6723440616749141513, guid: a7817007e2df2444eab23c92b709d132,
         type: 3}
