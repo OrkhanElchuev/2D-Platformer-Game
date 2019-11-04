@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     [SerializeField] float runningSpeed = 5f;
     [SerializeField] float jumpingSpeed = 5f;
     [SerializeField] float climbingSpeed = 5f;
+    [SerializeField] Vector2 deathJump = new Vector2(10f, 10f);
+
 
     // Cached components
     Rigidbody2D playerRigidBody;
@@ -30,6 +32,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Do not continue updating if player is dead
+        if (!isAlive) { return; }
         PlayerRun();
         PlayerJump();
         ClimbLadder();
@@ -44,6 +48,18 @@ public class Player : MonoBehaviour
         playerBodyCollider2D = GetComponent<CapsuleCollider2D>();
         playerFootCollider2D = GetComponent<BoxCollider2D>();
         gravityAtStart = playerRigidBody.gravityScale;
+    }
+
+    // Kill the player
+    private void Die()
+    {
+        // In case of collision with enemy
+        if (playerRigidBody.IsTouchingLayers(LayerMask.GetMask("Enemy")))
+        {
+            playerAnimator.SetTrigger("Die");
+            // Kick the player body 
+            GetComponent<Rigidbody2D>().velocity = deathJump;
+        }
     }
 
     // Jump the player
