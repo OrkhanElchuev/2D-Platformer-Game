@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: liquidWater
+  m_Name: spikes
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: 5e458054d6bb3694aab1e191763b5756, type: 3}
-  m_Color: {r: 0.5740922, g: 0.8349776, b: 0.9150943, a: 1}
+  m_Sprite: {fileID: 21300000, guid: ef926a9708e24a246a02e2ed2337e907, type: 3}
+  m_Color: {r: 0.9811321, g: 0.5784977, b: 0.5784977, a: 1}
   m_Transform:
     e00: 1
     e01: 0
