@@ -157,6 +157,7 @@ MonoBehaviour:
   runningSpeed: 7
   jumpingSpeed: 20
   climbingSpeed: 5
+  deathJump: {x: 20, y: 20}
 --- !u!61 &213518653
 BoxCollider2D:
   m_ObjectHideFlags: 0

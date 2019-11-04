@@ -38,6 +38,7 @@ public class Player : MonoBehaviour
         PlayerJump();
         ClimbLadder();
         FlipPlayerSprite();
+        Die();
     }
 
     // Assigning components
@@ -56,6 +57,8 @@ public class Player : MonoBehaviour
         // In case of collision with enemy
         if (playerRigidBody.IsTouchingLayers(LayerMask.GetMask("Enemy")))
         {
+            isAlive = false;
+            // Execute dying animation
             playerAnimator.SetTrigger("Die");
             // Kick the player body 
             GetComponent<Rigidbody2D>().velocity = deathJump;
