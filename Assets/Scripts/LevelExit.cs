@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class LevelExit : MonoBehaviour
 {
-    [SerializeField] float LevelLoadDelay = 2f;
+    private float levelLoadDelay = 1.5f;
+    private float levelExitSlowMotionRate = 0.2f;
 
     // When player collides with Level Exit sign execute LoadNextLevel
     private void OnTriggerEnter2D(Collider2D other)
@@ -16,7 +17,11 @@ public class LevelExit : MonoBehaviour
     // Load Next Level after defined delay (2f)
     IEnumerator LoadNextLevel()
     {
-        yield return new WaitForSecondsRealtime(LevelLoadDelay);
+        // Slow down game for (levelLoadDelay) period
+        Time.timeScale = levelExitSlowMotionRate;
+        yield return new WaitForSecondsRealtime(levelLoadDelay);
+        // GO back to normal state of game speed
+        Time.timeScale = 1f;
         // Get the current scene index and assign it
         var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         // Load next scene
