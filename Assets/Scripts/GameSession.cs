@@ -56,6 +56,7 @@ public class GameSession : MonoBehaviour
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         // Reload the current scene
         SceneManager.LoadScene(currentSceneIndex);
+        liveText.text = playerLives.ToString();
     }
 
     public void ExecutePlayerDeath()
