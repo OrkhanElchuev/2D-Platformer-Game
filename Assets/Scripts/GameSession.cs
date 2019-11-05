@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameSession : MonoBehaviour
 {
     [SerializeField] int playerLives = 3;
+    [SerializeField] int playerScore = 0;
+    [SerializeField] TextMeshProUGUI scoreText;
+    [SerializeField] TextMeshProUGUI liveText;
+
     private void Awake()
     {
         // Get the number of GameSession objects
@@ -25,7 +30,16 @@ public class GameSession : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Assign text fields to relevant values
+        liveText.text = playerLives.ToString();
+        scoreText.text = playerScore.ToString();
+    }
 
+    // Increment score
+    public void AddToScore(int points)
+    {
+        playerScore += points;
+        scoreText.text = playerScore.ToString();
     }
 
     // Load start menu and destroy gameSession object
