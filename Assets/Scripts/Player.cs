@@ -62,6 +62,7 @@ public class Player : MonoBehaviour
             playerAnimator.SetTrigger("Die");
             // Kick the player body 
             GetComponent<Rigidbody2D>().velocity = deathJump;
+            FindObjectOfType<GameSession>().ExecutePlayerDeath();
         }
     }
 
