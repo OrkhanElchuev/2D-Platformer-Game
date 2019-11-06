@@ -11,9 +11,10 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
-    // Load menu scene
+    // Load menu scene and destroy game session object
     public void StartMainMenu()
     {
+        FindObjectOfType<GameSession>().ResetGameSession();
         SceneManager.LoadScene(0);
     }
 }

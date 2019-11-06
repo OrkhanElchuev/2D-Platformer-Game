@@ -20,6 +20,8 @@ public class LevelExit : MonoBehaviour
         // Slow down game for (levelLoadDelay) period
         Time.timeScale = levelExitSlowMotionRate;
         yield return new WaitForSecondsRealtime(levelLoadDelay);
+        // Destroy ScenePersist from current level to avoid overlapping issues
+        Destroy(FindObjectOfType<ScenePersist>());
         // GO back to normal state of game speed
         Time.timeScale = 1f;
         // Get the current scene index and assign it

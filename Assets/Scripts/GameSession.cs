@@ -50,7 +50,7 @@ public class GameSession : MonoBehaviour
     }
 
     // Load start menu and destroy gameSession object
-    private void ResetGameSession()
+    public void ResetGameSession()
     {
         SceneManager.LoadScene(0);
         Destroy(gameObject);
