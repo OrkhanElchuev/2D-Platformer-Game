@@ -1354,42 +1354,32 @@ PrefabInstance:
     - target: {fileID: 2611108331782835578, guid: 204ff74e8b606fe48978984095be7bf0,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -114.6
+      value: -164
       objectReference: {fileID: 0}
     - target: {fileID: 2611108331782835578, guid: 204ff74e8b606fe48978984095be7bf0,
         type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 180.2
+      propertyPath: m_AnchoredPosition.y
+      value: -34
       objectReference: {fileID: 0}
     - target: {fileID: 6678225734669613680, guid: 204ff74e8b606fe48978984095be7bf0,
         type: 3}
       propertyPath: m_textAlignment
       value: 516
       objectReference: {fileID: 0}
-    - target: {fileID: 6678225734669613680, guid: 204ff74e8b606fe48978984095be7bf0,
+    - target: {fileID: 3803039830262013456, guid: 204ff74e8b606fe48978984095be7bf0,
         type: 3}
-      propertyPath: m_text
-      value: 0
+      propertyPath: m_AnchoredPosition.x
+      value: 83
       objectReference: {fileID: 0}
-    - target: {fileID: 6678225734669613680, guid: 204ff74e8b606fe48978984095be7bf0,
+    - target: {fileID: 3803039830262013456, guid: 204ff74e8b606fe48978984095be7bf0,
         type: 3}
-      propertyPath: m_textInfo.characterCount
+      propertyPath: m_AnchoredPosition.y
+      value: -34
+      objectReference: {fileID: 0}
+    - target: {fileID: 1805115355592864365, guid: 204ff74e8b606fe48978984095be7bf0,
+        type: 3}
+      propertyPath: m_UiScaleMode
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6678225734669613680, guid: 204ff74e8b606fe48978984095be7bf0,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6678225734669613680, guid: 204ff74e8b606fe48978984095be7bf0,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6678225734669613680, guid: 204ff74e8b606fe48978984095be7bf0,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 204ff74e8b606fe48978984095be7bf0, type: 3}
