@@ -42,6 +42,13 @@ public class GameSession : MonoBehaviour
         scoreText.text = playerScore.ToString();
     }
 
+    // Increase health points
+    public void IncrementHealth(int amount)
+    {
+        playerLives += amount;
+        liveText.text = playerLives.ToString();
+    }
+
     // Load start menu and destroy gameSession object
     private void ResetGameSession()
     {

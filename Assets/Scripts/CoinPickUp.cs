@@ -5,7 +5,7 @@ using UnityEngine;
 public class CoinPickUp : MonoBehaviour
 {
     [SerializeField] AudioClip coinPickUpSound;
-    [SerializeField] int pointsForCoin = 100;
+    private int pointsForCoin = 100;
     private bool coinPicked = false;
 
     private void OnTriggerEnter2D(Collider2D other)
