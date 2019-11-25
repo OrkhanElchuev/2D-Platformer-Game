@@ -8,6 +8,7 @@ This is a small project created on Unity for advancing skills in Tile Map creati
 - Visual Studio Code. Coding in C# Programming Language.
 - GitBash.
 - Inno Setup Compiler (For creating installer files)
+## How to Install?
 ### For Windows User
 - Open Folder Named "Game" in 2D-Platformer-Game repository.
 - Proceed to Windows Folder.
