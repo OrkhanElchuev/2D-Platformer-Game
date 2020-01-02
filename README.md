@@ -25,7 +25,7 @@ This is a small project created on Unity for advancing skills in Tile Map creati
 ## Contacts 
 - E-mail address orkhan.elchuev@gmail.com
 - https://github.com/OrkhanElchuev/Gardener-Game
-## Aknowledgements
+## Acknowledgements
 - [dafont](https://www.dafont.com/de/)
 - [Freesound](https://freesound.org/)
 - [KenneyAssets](https://www.kenney.nl/assets?s=Platformer)
