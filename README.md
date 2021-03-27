@@ -1,5 +1,5 @@
 # 2D-Platformer Game
-This is a small project created on Unity for advancing skills in Tile Map creation and working with Palette feature. The game contains 4 short Levels with gradually increasing difficulty.
+This is a small project created on Unity for advancing skills in Tile Map creation and working with Palette feature. This game was created via help of 2D-game development course on Udemy. The game contains 4 short Levels with gradually increasing difficulty.
 ## Screenshots
 ![](Images/Menu.png)
 ![](Images/GamePlay.png)
